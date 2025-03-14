@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  padding: 0;
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+}
+
+:root {
+  box-sizing: border-box;
+
+  /* Colors */
+  --primary-color-black: #000;
+  --primary-color-gray: #ccc;
+  --primary-color-green: #daff01;
+  --primary-color-violet: #9353ff;
+  --secondary-color-brown: #ee6471;
+  --secondary-color-orange: #f87f46;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color-black);
+  color: #fff;
+  height: 58px;
+  padding: 0 23px;
+  justify-content: space-between;
+
+  & ul {
+    display: flex;
+    gap: 40px;
+  }
+
+  & input {
+    font-family: 'Inter', sans-serif;
+    border: 1px solid var(--primary-color-gray);
+    outline: 0;
+    padding: 0px 15px;
+    height: 36px;
+  }
+
+  & button {
+    font-family: 'Inter', sans-serif;
+    padding: 9px 12px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    height: 36px;
+  }
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
