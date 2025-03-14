@@ -12,6 +12,8 @@
 :root {
   box-sizing: border-box;
 
+  /* Font */
+  --primary-font-family: 'Inter', sans-serif;
   /* Colors */
   --primary-color-black: #000;
   --primary-color-gray: #ccc;
@@ -22,7 +24,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--primary-font-family);
 }
 
 header {
@@ -30,8 +32,8 @@ header {
   align-items: center;
   background-color: var(--primary-color-black);
   color: #fff;
-  height: 58px;
-  padding: 0 23px;
+
+  padding: 10px 23px;
   justify-content: space-between;
 
   & ul {
@@ -40,21 +42,24 @@ header {
   }
 
   & input {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--primary-font-family);
     border: 1px solid var(--primary-color-gray);
     outline: 0;
     padding: 0px 15px;
-    height: 36px;
   }
 
   & button {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--primary-font-family);
     padding: 9px 12px;
     border: 1px solid white;
     background-color: transparent;
     color: #fff;
     cursor: pointer;
-    height: 36px;
+
+    &:hover {
+      border: 1px solid var(--primary-color-green);
+      color: var(--primary-color-green);
+    }
   }
 }
 
@@ -66,6 +71,6 @@ header {
 
 .search-container {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  align-items: stretch;
+  gap: 1rem;
 }
