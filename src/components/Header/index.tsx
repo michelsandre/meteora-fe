@@ -7,20 +7,32 @@ export const Header = () => {
     { label: 'Promoções', link: '#' },
   ];
 
+  const handleSubmit = (formData: FormData) => {
+    const produto = formData.get('produto');
+    console.log(produto);
+  };
+
   return (
     <header>
-      <div className="menu-container">
-        <img src={logo} alt="logo" height="32" width="133" />
+      <nav>
         <ul>
+          <li>
+            <a href="">
+              <img src={logo} alt="logo" width={133} height={32} />
+            </a>
+          </li>
           {menu.map((item, i) => (
-            <li key={i}>{item.label}</li>
+            <li key={i}>
+              <a href="">{item.label}</a>
+            </li>
           ))}
         </ul>
-      </div>
-      <div className="search-container">
-        <input type="text" placeholder="Digite o produto" />
-        <button>Buscar</button>
-      </div>
+
+        <form action={handleSubmit}>
+          <input type="text" name="produto" placeholder="Digite o produto" />
+          <button type="submit">Buscar</button>
+        </form>
+      </nav>
     </header>
   );
 };
