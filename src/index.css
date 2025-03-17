@@ -72,3 +72,7 @@ nav {
     }
   }
 }
+
+.banner-container img {
+  width: 100%;
+}
