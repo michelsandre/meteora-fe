@@ -1,4 +1,4 @@
-import { categorias } from '../../constants/categorias';
+import { categorias } from '@/constants/categorias';
 import { CategoriaCard } from './CategoriaCard';
 
 export const Categoria = () => {
