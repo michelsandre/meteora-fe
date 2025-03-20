@@ -1,4 +1,6 @@
-import logo from '../../assets/logo-desktop.png';
+import logo from '@/assets/logo-desktop.png';
+import styles from './styles.module.css';
+
 export const Header = () => {
   const menu = [
     { label: 'Home', link: '#' },
@@ -13,7 +15,7 @@ export const Header = () => {
   };
 
   return (
-    <header>
+    <header className={styles.header}>
       <nav>
         <ul>
           <li>

@@ -24,59 +24,6 @@
   --secondary-color-orange: #f87f46;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--primary-color-black);
-  color: white;
-  padding: 13px 23px;
-
-  & ul {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-
-  & a {
-    text-decoration: none;
-    color: white;
-    &:hover {
-      color: var(--primary-color-green);
-    }
-  }
-
-  form {
-    display: flex;
-    align-items: stretch;
-    gap: 1rem;
-
-    & input {
-      height: 100%;
-      font-size: 15px;
-      padding: 0 15px;
-      outline: none;
-    }
-    & button {
-      height: 100%;
-      font-size: 1rem;
-      padding: 9px 12px;
-      border: 1px solid white;
-      background-color: transparent;
-      color: white;
-      cursor: pointer;
-
-      &:hover {
-        color: var(--primary-color-green);
-        border: 1px solid var(--primary-color-green);
-      }
-    }
-  }
-}
-
-.banner-container img {
-  width: 100%;
-}
-
 .section-categorias {
   padding: 74px 150px 48px 150px;
   display: flex;

@@ -5,9 +5,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
+import styles from './styles.module.css';
+
 export const Banner = () => {
   return (
-    <div className="banner-container">
+    <div className={styles.banner}>
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{
