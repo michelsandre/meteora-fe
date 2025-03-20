@@ -1,8 +1,7 @@
 .modal {
   width: 700px;
   height: 522px;
-  margin: 50vh auto;
-  transform: translateY(-50%);
+  margin: calc(50vh - 522px / 2) auto;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
 
@@ -62,5 +61,21 @@
     line-height: 100%;
     font-size: 13px;
     font-weight: 400;
+  }
+}
+
+.modal[open] {
+  display: block;
+  animation: showModal 0.3s ease;
+}
+
+@keyframes showModal {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
   }
 }
