@@ -1,6 +1,6 @@
 .modal {
   width: 700px;
-  height: 522px;
+
   margin: calc(50vh - 522px / 2) auto;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
@@ -32,23 +32,41 @@
 
   & section {
     display: flex;
-    height: 300px;
     padding: 16px 16px 32px 16px;
   }
 }
 
-.image {
-  width: 350px;
-  height: 422px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
+.image img {
+  object-fit: cover;
+  height: auto;
+  width: 100%;
 }
 .content {
   display: flex;
   flex-direction: column;
-
   flex: 1;
   padding: 0 16px;
+  gap: 16px;
+
+  & .button {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    padding: 9px 16px;
+    background-color: #9353ff;
+    color: white;
+    width: 180px;
+    margin-top: 9px;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
   gap: 24px;
 
   & h3 {
@@ -62,11 +80,75 @@
     font-size: 13px;
     font-weight: 400;
   }
+
+  & hr {
+    border-top: 1px solid #000;
+  }
+  & .price {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  & .soldby {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #adb5bd;
+  }
+}
+.options {
+  border-top: 1px solid #d8d8d8;
+
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & p {
+    line-height: 100%;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  & fieldset {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    & label {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 100%;
+    }
+
+    & .optionGroup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+  }
 }
 
 .modal[open] {
   display: block;
   animation: showModal 0.3s ease;
+}
+
+input[type='radio'] {
+  appearance: none;
+  border: 1px solid #dee2e6;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: #f3f6f7;
+  cursor: pointer;
+
+  &:checked {
+    background-color: #75d7f0;
+    border: 3px solid #9353ff;
+    outline: 1px solid #c3c4ff;
+  }
 }
 
 @keyframes showModal {
