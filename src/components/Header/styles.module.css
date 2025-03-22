@@ -4,21 +4,28 @@
     background-color: var(--primary-bg-black);
     color: white;
     padding: 13px 23px;
+    flex-wrap: wrap;
 
     & .logo {
       margin-right: 40px;
+      display: flex;
 
       & img {
         height: auto;
         width: 133px;
       }
-    }
 
-    & button.menu {
-      display: none;
-      background-color: transparent;
-      cursor: pointer;
-      border: none;
+      & button.menu {
+        display: none;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+
+        & img {
+          width: 18px;
+          height: 18px;
+        }
+      }
     }
 
     & ul {
@@ -50,14 +57,14 @@
       gap: 1rem;
 
       & input {
-        height: 100%;
+        height: auto;
         font-size: 15px;
         font-weight: 400;
         padding: 0 15px;
         outline: none;
       }
       & button {
-        height: 100%;
+        height: auto;
         font-weight: 500;
         padding: 9px 12px;
         border: 1px solid var(--primary-color-white);
@@ -77,18 +84,20 @@
   .header {
     & nav {
       padding: 20px 22px;
+      flex-direction: column;
 
       & .logo {
-        margin-right: auto;
+        width: 100%;
 
         & img {
           height: auto;
           width: 125.7px;
+          margin-right: auto;
         }
-      }
 
-      & button.menu {
-        display: block;
+        & button.menu {
+          display: block;
+        }
       }
 
       & ul {
@@ -125,7 +134,33 @@
       }
 
       & form {
-        display: none;
+        margin-top: 20px;
+        align-items: stretch;
+        justify-content: center;
+        width: 100%;
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid var(--primary-bg-dark-gray);
+        outline: 1px solid var(--primary-color-green);
+
+        & button {
+          height: auto;
+          border: 1px solid var(--primary-color-gray);
+          color: var(--primary-color-black);
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: var(--primary-bg-gray);
+            color: black;
+            border: 1px solid var(--primary-color-black);
+          }
+        }
+        & input {
+          height: auto;
+          width: 100%;
+          border: 1px solid var(--primary-color-gray);
+        }
       }
     }
   }

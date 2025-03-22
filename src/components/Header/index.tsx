@@ -31,10 +31,15 @@ export const Header = () => {
       <nav>
         <div className={styles.logo}>
           <img src={logo} alt="logo" width={133} height={32} />
+          <button
+            type="button"
+            className={styles.menu}
+            onClick={handleOpenMenu}
+          >
+            <img src={menuIcon} width="18" height="18" alt="Menu" />
+          </button>
         </div>
-        <button type="button" className={styles.menu} onClick={handleOpenMenu}>
-          <img src={menuIcon} width="18" height="18" alt="Menu" />
-        </button>
+
         <ul ref={menuRef}>
           <button
             type="button"
