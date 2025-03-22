@@ -1,10 +1,12 @@
+import styles from './styles.module.css';
+
 export const Footer = () => {
   return (
-    <footer>
-      <p>
-        2025 &copy; Desenvolvido por Alura | Projeto ficticio sem fins
+    <footer className={styles.footer}>
+      <span>
+        2025 &copy; Desenvolvido por André Michels | Projeto ficticio sem fins
         comerciais
-      </p>
+      </span>
     </footer>
   );
 };

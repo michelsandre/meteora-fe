@@ -1,0 +1,14 @@
+.button {
+  border: none;
+
+  background-color: var(--primary-bg-violet);
+  color: var(--primary-color-white);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 9px 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(1.1);
+}

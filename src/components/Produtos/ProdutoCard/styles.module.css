@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  border: 1px solid #00000021;
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  text-align: left;
+}
+
+.titulo {
+  font-weight: 700;
+  margin-bottom: 13px;
+  line-height: 23px;
+}
+
+.descricao {
+  line-height: 1.25rem;
+}
+.preco {
+  font-weight: 700;
+  margin: 16px 0 10px 0;
+  line-height: 23px;
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 323px;
+  }
+}

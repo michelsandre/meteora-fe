@@ -1,0 +1,19 @@
+.categoria {
+  display: flex;
+  flex-direction: column;
+
+  & p {
+    background-color: var(--primary-bg-black);
+    color: var(--primary-color-white);
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .categoria {
+    & img {
+      width: 146px;
+      height: 157px;
+    }
+  }
+}

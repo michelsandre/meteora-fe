@@ -1,4 +1,6 @@
 import { RefObject } from 'react';
+import styles from './styles.module.css';
+import { Button } from '@/components/Button';
 
 interface PropsProduto {
   produto: {
@@ -12,14 +14,18 @@ interface PropsProduto {
 
 export const ProdutoCard = ({ produto, ref }: PropsProduto) => {
   return (
-    <div className="card-produto">
-      <img src={produto.imagem} alt="Tenis" />
-      <p className="titulo">{produto.nome}</p>
-      <p className="descricao">{produto.descricao}</p>
-      <p className="preco">{produto.preco}</p>
-      <button type="button" onClick={() => ref.current.showModal()}>
-        Ver mais
-      </button>
+    <div className={styles.card}>
+      <img src={produto.imagem} alt={produto.nome} />
+      <div className={styles.container}>
+        <p className={styles.titulo}>{produto.nome}</p>
+        <span className={styles.descricao}>{produto.descricao}</span>
+        <p className={styles.preco}>{produto.preco}</p>
+        <div>
+          <Button type="button" onClick={() => ref.current.showModal()}>
+            Ver mais
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };

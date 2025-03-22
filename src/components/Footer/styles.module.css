@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-bg-black);
+  color: white;
+  padding: 17px 23px;
+
+  & span {
+    line-height: 20px;
+    text-align: center;
+  }
+}

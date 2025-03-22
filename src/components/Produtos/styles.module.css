@@ -1,0 +1,28 @@
+.section {
+  margin-bottom: 84px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  & h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+@media (max-width: 375px) {
+  .section {
+    margin-bottom: 48px;
+
+    & h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

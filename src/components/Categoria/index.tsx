@@ -1,11 +1,12 @@
 import { categorias } from '@/constants/categorias';
 import { CategoriaCard } from './CategoriaCard';
+import styles from './styles.module.css';
 
 export const Categoria = () => {
   return (
-    <section className="section-categorias">
+    <section className={styles.section}>
       <h2>Busque por categoria:</h2>
-      <div className="categoria-container">
+      <div className={styles.container}>
         {categorias.map((categoria, index) => (
           <CategoriaCard categoria={categoria} key={index} />
         ))}

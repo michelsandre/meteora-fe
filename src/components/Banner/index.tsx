@@ -18,15 +18,16 @@ export const Banner = () => {
         slidesPerView={1}
         loop={true}
         autoplay={{ delay: 3000 }}
+        className={styles.swiper}
       >
         <SwiperSlide>
-          <img src="/banner/banner-1.png" alt="Banner 1" />
+          <div className={styles.banner1} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/banner/banner-2.png" alt="Banner 2" />
+          <div className={styles.banner2} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/banner/banner-3.png" alt="Banner 3" />
+          <div className={styles.banner3} />
         </SwiperSlide>
       </Swiper>
     </div>

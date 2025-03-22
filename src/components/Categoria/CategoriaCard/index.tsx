@@ -1,3 +1,5 @@
+import styles from './styles.module.css';
+
 interface PropsCategoria {
   categoria: {
     nome: string;
@@ -8,9 +10,16 @@ interface PropsCategoria {
 export const CategoriaCard = ({ categoria }: PropsCategoria) => {
   return (
     <a href="#">
-      <div className="card-categoria">
-        <img src={categoria.imagem} alt={categoria.nome} />
-        <p>{categoria.nome}</p>
+      <div className={styles.categoria}>
+        <img
+          src={categoria.imagem}
+          width="160"
+          height="157"
+          alt={categoria.nome}
+        />
+        <p>
+          <strong>{categoria.nome}</strong>
+        </p>
       </div>
     </a>
   );

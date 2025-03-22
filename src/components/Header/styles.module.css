@@ -1,20 +1,44 @@
 .header {
   & nav {
     display: flex;
-    justify-content: space-between;
-    background-color: var(--primary-color-black);
+    background-color: var(--primary-bg-black);
     color: white;
     padding: 13px 23px;
+
+    & .logo {
+      margin-right: 40px;
+
+      & img {
+        height: auto;
+        width: 133px;
+      }
+    }
+
+    & button.menu {
+      display: none;
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+    }
 
     & ul {
       display: flex;
       align-items: center;
+      margin-right: auto;
+      list-style: none;
       gap: 40px;
+
+      & button.close {
+        display: none;
+        align-self: flex-end;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
     }
 
     & a {
-      text-decoration: none;
-      color: white;
+      color: var(---primary-color-white);
       &:hover {
         color: var(--primary-color-green);
       }
@@ -28,22 +52,80 @@
       & input {
         height: 100%;
         font-size: 15px;
+        font-weight: 400;
         padding: 0 15px;
         outline: none;
       }
       & button {
         height: 100%;
-        font-size: 1rem;
+        font-weight: 500;
         padding: 9px 12px;
-        border: 1px solid white;
+        border: 1px solid var(--primary-color-white);
         background-color: transparent;
-        color: white;
+        color: var(--primary-color-white);
         cursor: pointer;
 
         &:hover {
           color: var(--primary-color-green);
           border: 1px solid var(--primary-color-green);
         }
+      }
+    }
+  }
+}
+@media (max-width: 375px) {
+  .header {
+    & nav {
+      padding: 20px 22px;
+
+      & .logo {
+        margin-right: auto;
+
+        & img {
+          height: auto;
+          width: 125.7px;
+        }
+      }
+
+      & button.menu {
+        display: block;
+      }
+
+      & ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 99;
+        flex-direction: column;
+        background-color: var(--primary-bg-dark-gray);
+        gap: 8px;
+        padding: 24px;
+        align-items: start;
+        transition: right 0.3s ease;
+
+        & button.close {
+          display: block;
+        }
+
+        & li:nth-child(2) {
+          border-top: none;
+          padding-top: none;
+        }
+
+        & li {
+          border-top: 1px solid var(--primary-border-menu);
+          padding-top: 8px;
+          width: 100%;
+        }
+      }
+      & ul.show {
+        display: flex;
+        right: 0;
+        transition: right 0.3s ease;
+      }
+
+      & form {
+        display: none;
       }
     }
   }
