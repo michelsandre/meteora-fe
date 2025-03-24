@@ -1,5 +1,6 @@
 import { RefObject } from 'react';
 import styles from './styles.module.css';
+import { Button } from '../Button';
 
 export const Modal = ({ ref }: { ref: RefObject<HTMLDialogElement> }) => {
   return (
@@ -8,7 +9,7 @@ export const Modal = ({ ref }: { ref: RefObject<HTMLDialogElement> }) => {
         <header>
           <img src="/icones/check.svg" width="32" height="32" alt="Icone Check" />
           <h2>Confira detalhes sobre o produto</h2>
-          <button type="button" onClick={() => ref.current.close()}>
+          <button type="button" className={styles.buttonClose} onClick={() => ref.current.close()}>
             <img src="/icones/close.svg" width="16" height="16" alt="Icone Fechar" />
           </button>
         </header>
@@ -66,9 +67,9 @@ export const Modal = ({ ref }: { ref: RefObject<HTMLDialogElement> }) => {
                 </div>
               </fieldset>
             </div>
-            <button className={styles.button} type="button">
-              Adicionar à sacola
-            </button>
+            <div className={styles.buttonContainer}>
+              <Button type="button">Adicionar à sacola</Button>
+            </div>
           </div>
         </section>
       </article>
