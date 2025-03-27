@@ -1,8 +1,16 @@
-import { RefObject } from 'react';
+import { RefObject, useContext } from 'react';
 import styles from './styles.module.css';
 import { Button } from '../Button';
 
-export const Modal = ({ ref }: { ref: RefObject<HTMLDialogElement> }) => {
+import { ProdutoContext } from '@/context/ProdutoContext';
+
+interface IModalProps {
+  ref: RefObject<HTMLDialogElement>;
+}
+
+export const ProdutoModal = ({ ref }: IModalProps) => {
+  const context = useContext(ProdutoContext);
+
   return (
     <dialog className={styles.modal} ref={ref}>
       <article>
@@ -15,14 +23,14 @@ export const Modal = ({ ref }: { ref: RefObject<HTMLDialogElement> }) => {
         </header>
         <section>
           <div className={styles.image}>
-            <img src="/produtos/jaqueta.png" width="350" height="422" alt="Jaqueta" />
+            <img src={context?.selectProduto?.imagem} width="350" height="422" alt="Jaqueta" />
           </div>
           <div className={styles.content}>
             <div className={styles.description}>
-              <h3>Jaqueta Jeans</h3>
-              <p>Modelo unissex oversized com gola de camurça. Atemporal e autêntica!</p>
+              <h3>{context?.selectProduto?.nome}</h3>
+              <p>{context?.selectProduto?.descricao}</p>
               <hr />
-              <p className={styles.price}>R$ 150,00</p>
+              <p className={styles.price}>{context?.selectProduto?.preco}</p>
               <p className={styles.soldby}>Vendido e entregue por Riachuelo</p>
             </div>
             <div className={styles.options}>
