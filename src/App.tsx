@@ -1,4 +1,4 @@
-import { RefObject, useRef, useState } from 'react';
+import { useState } from 'react';
 import { Banner } from './components/Banner';
 import { Categoria } from './components/Categoria';
 import { Facilidades } from './components/Facilidades';
@@ -10,16 +10,16 @@ import { IProduto } from './types/produto.interface';
 import { ProdutoContext } from './context/ProdutoContext';
 
 export default function App() {
-  const dialogRef = useRef<HTMLDialogElement>(null);
   const [selectProduto, setSelectProduto] = useState<IProduto | null>(null);
+  const [searchParam, setSearchParam] = useState<string>('');
 
   return (
     <>
-      <Header />
+      <Header setSearchParam={setSearchParam} />
       <Banner />
       <Categoria />
-      <ProdutoContext.Provider value={{ setSelectProduto, selectProduto }}>
-        <Produtos ref={dialogRef as RefObject<HTMLDialogElement>} />
+      <ProdutoContext.Provider value={{ setSelectProduto, selectProduto, searchParam }}>
+        <Produtos />
       </ProdutoContext.Provider>
       <Facilidades />
       <Newsletter />

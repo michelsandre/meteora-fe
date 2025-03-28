@@ -5,7 +5,7 @@ import { Button } from '../Button';
 import { ProdutoContext } from '@/context/ProdutoContext';
 
 interface IModalProps {
-  ref: RefObject<HTMLDialogElement>;
+  ref: RefObject<HTMLDialogElement | null>;
 }
 
 export const ProdutoModal = ({ ref }: IModalProps) => {
@@ -17,7 +17,7 @@ export const ProdutoModal = ({ ref }: IModalProps) => {
         <header>
           <img src="/icones/check.svg" width="32" height="32" alt="Icone Check" />
           <h2>Confira detalhes sobre o produto</h2>
-          <button type="button" className={styles.buttonClose} onClick={() => ref.current.close()}>
+          <button type="button" className={styles.buttonClose} onClick={() => ref.current?.close()}>
             <img src="/icones/close.svg" width="16" height="16" alt="Icone Fechar" />
           </button>
         </header>

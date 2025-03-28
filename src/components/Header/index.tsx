@@ -4,7 +4,11 @@ import closeIcon from '@/assets/marca-cruzada.png';
 import menuIcon from '@/assets/hamburguer-icon.svg';
 import { useRef } from 'react';
 
-export const Header = () => {
+interface PropsHeaderType {
+  setSearchParam: (searchParam: string) => void;
+}
+
+export const Header = ({ setSearchParam }: PropsHeaderType) => {
   const menuRef = useRef<HTMLUListElement>(null);
 
   const menu = [
@@ -26,26 +30,26 @@ export const Header = () => {
     menuRef.current?.classList.remove(styles.show);
   };
 
+  const handleFormAction = (formData: FormData) => {
+    const search = formData.get('produto');
+
+    if (typeof search === 'string') {
+      setSearchParam(search);
+    }
+  };
+
   return (
     <header className={styles.header}>
       <nav>
         <div className={styles.logo}>
           <img src={logo} alt="logo" width={133} height={32} />
-          <button
-            type="button"
-            className={styles.menu}
-            onClick={handleOpenMenu}
-          >
+          <button type="button" className={styles.menu} onClick={handleOpenMenu}>
             <img src={menuIcon} width="18" height="18" alt="Menu" />
           </button>
         </div>
 
         <ul ref={menuRef}>
-          <button
-            type="button"
-            className={styles.close}
-            onClick={handleCloseMenu}
-          >
+          <button type="button" className={styles.close} onClick={handleCloseMenu}>
             <img src={closeIcon} width="18" height="17" alt="Fechar" />
           </button>
           {menu.map((item, i) => (
@@ -55,7 +59,7 @@ export const Header = () => {
           ))}
         </ul>
 
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form action={handleFormAction}>
           <input type="text" name="produto" placeholder="Digite o produto" />
           <button type="submit">Buscar</button>
         </form>

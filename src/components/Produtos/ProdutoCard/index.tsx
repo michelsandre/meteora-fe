@@ -6,14 +6,14 @@ import { ProdutoContext } from '@/context/ProdutoContext';
 
 interface PropsProduto {
   produto: IProduto;
-  ref: RefObject<HTMLDialogElement>;
+  ref: RefObject<HTMLDialogElement | null>;
 }
 
 export const ProdutoCard = ({ produto, ref }: PropsProduto) => {
   const context = useContext(ProdutoContext);
 
   const handleClick = () => {
-    ref.current.showModal();
+    ref.current?.showModal();
     context?.setSelectProduto(produto);
   };
 
