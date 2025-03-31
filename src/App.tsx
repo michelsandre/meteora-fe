@@ -12,13 +12,14 @@ import { ProdutoContext } from './context/ProdutoContext';
 export default function App() {
   const [selectProduto, setSelectProduto] = useState<IProduto | null>(null);
   const [searchParam, setSearchParam] = useState<string>('');
+  const [groupParam, setGroupParam] = useState<string>('');
 
   return (
     <>
       <Header setSearchParam={setSearchParam} />
       <Banner />
-      <Categoria />
-      <ProdutoContext.Provider value={{ setSelectProduto, selectProduto, searchParam }}>
+      <Categoria setGroupParam={setGroupParam} groupParam={groupParam} />
+      <ProdutoContext.Provider value={{ setSelectProduto, selectProduto, searchParam, groupParam }}>
         <Produtos />
       </ProdutoContext.Provider>
       <Facilidades />

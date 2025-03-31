@@ -6,6 +6,7 @@ interface ProdutoContextType {
   selectProduto: IProduto | null;
 
   searchParam: string;
+  groupParam: string;
 }
 
 export const ProdutoContext = createContext<ProdutoContextType | null>(null);

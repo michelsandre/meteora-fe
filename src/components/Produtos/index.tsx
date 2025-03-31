@@ -43,8 +43,11 @@ export const Produtos = () => {
           .replace(/[\u0300-\u036f]/g, '')
           .replace(/ç/g, 'c');
 
-      const filter = produtos?.filter((produto) =>
-        normalize(produto.nome.toLowerCase()).includes(normalize(context.searchParam.toLowerCase()))
+      const filter = produtos?.filter(
+        (produto) =>
+          normalize(produto.nome.toLowerCase()).includes(
+            normalize(context.searchParam.toLowerCase())
+          ) && produto.categoria.includes(context.groupParam)
       );
       return filter?.map((produto, index) => (
         <ProdutoCard produto={produto} key={index} ref={ref} />

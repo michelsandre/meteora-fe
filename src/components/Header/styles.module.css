@@ -46,8 +46,12 @@
 
     & a {
       color: var(---primary-color-white);
+      transition: text-shadow ease-out 0.3s;
+
       &:hover {
         color: var(--primary-color-green);
+        text-shadow: var(--primary-bg-violet) 0 0 15px, var(--primary-bg-violet) 0 0 15px,
+          var(--primary-bg-violet) 0 0 15px;
       }
     }
 

@@ -3,4 +3,5 @@ export interface IProduto {
   descricao: string;
   preco: string;
   imagem: string;
+  categoria: string;
 }

@@ -4,37 +4,43 @@
       "nome": "Camiseta Conforto",
       "descricao": "Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.",
       "preco": "R$ 70,00",
-      "imagem": "/produtos/camiseta.png"
+      "imagem": "/produtos/camiseta.png",
+      "categoria": "Camisetas"
     },
     {
       "nome": "Calça Alfaiataria",
       "descricao": "Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!",
       "preco": "R$ 180,00",
-      "imagem": "/produtos/calca.png"
+      "imagem": "/produtos/calca.png",
+      "categoria": "Calças"
     },
     {
       "nome": "Tênis Chunky",
       "descricao": "Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.",
       "preco": "R$ 250,00",
-      "imagem": "/produtos/tenis.png"
+      "imagem": "/produtos/tenis.png",
+      "categoria": "Calçados"
     },
     {
       "nome": "Jaqueta Jeans",
       "descricao": "Modelo unissex oversized com gola de camurça. Atemporal e autêntica!",
       "preco": "R$ 150,00",
-      "imagem": "/produtos/jaqueta.png"
+      "imagem": "/produtos/jaqueta.png",
+      "categoria": "Casacos"
     },
     {
       "nome": "Óculos Redondo",
       "descricao": "Armação metálica em grafite com lentes arredondadas. Sem erro!",
       "preco": "R$ 120,00",
-      "imagem": "/produtos/oculos.png"
+      "imagem": "/produtos/oculos.png",
+      "categoria": "Óculos"
     },
     {
       "nome": "Bolsa Coringa",
       "descricao": "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
       "preco": "R$ 120,00",
-      "imagem": "/produtos/bolsa.png"
+      "imagem": "/produtos/bolsa.png",
+      "categoria": "Bolsas"
     }
   ]
 }
